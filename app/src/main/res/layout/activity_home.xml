@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_draw"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".components.activity.home.HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white" />
+
+        <FrameLayout
+            android:id="@+id/fl_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/bg_history">
+
+        <ListView
+            android:id="@+id/lv_drawer_list"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/divider"
+            android:background="@color/bg_keyboard"
+            android:choiceMode="singleChoice"
+            android:divider="@null"
+            android:dividerHeight="0dp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_above="@+id/footer"
+            android:background="@color/bg_history" />
+
+        <TextView
+            android:id="@+id/footer"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg_keyboard"
+            android:drawableLeft="@drawable/ic_settings"
+            android:drawablePadding="@dimen/pad25"
+            android:gravity="center_vertical"
+            android:padding="@dimen/pad12"
+            android:text="Settings"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font18" />
+
+    </RelativeLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

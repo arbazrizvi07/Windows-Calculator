@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteY="25dp"
+    tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                style="@style/StyleSymbols"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/modulo"
+                android:id="@+id/textView2"
+                android:layout_marginEnd="3dp"
+                tools:layout_editor_absoluteY="53dp"
+                tools:layout_editor_absoluteX="292dp" />
+
+            <TextView
+                android:id="@+id/sqrt"
+                style="@style/StyleSymbols"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sqrt"
+                android:layout_marginEnd="1dp"
+                tools:layout_editor_absoluteY="269dp"
+                tools:layout_editor_absoluteX="111dp" />
+
+            <TextView
+                android:id="@+id/square"
+                style="@style/StyleSymbols"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/square"
+                android:layout_marginEnd="2dp"
+                tools:layout_editor_absoluteX="65dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                style="@style/StyleSymbols"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/onex"
+                android:id="@+id/textView3"
+                tools:layout_editor_absoluteY="138dp"
+                tools:layout_editor_absoluteX="111dp" />
+
+
+
+            <TextView
+                style="@style/StyleSymbols"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="CE"
+                android:id="@+id/textView"
+                tools:layout_editor_absoluteY="178dp"
+                tools:layout_editor_absoluteX="147dp" />
+
+
+            <TextView
+                android:id="@+id/clear"
+                style="@style/StyleSymbols"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/clear"
+                android:layout_marginEnd="2dp"
+                tools:layout_editor_absoluteY="145dp"
+                tools:layout_editor_absoluteX="222dp" />
+
+
+            <TextView
+                android:id="@+id/backSpace"
+                style="@style/StyleSymbols"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/backspace"
+                tools:layout_editor_absoluteY="93dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintHorizontal_bias="1.0" />
+
+
+            <TextView
+                android:id="@+id/divide"
+                style="@style/StyleSymbols"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad10"
+                android:text="@string/divide"
+                android:textSize="28sp"
+                android:layout_marginEnd="4dp"
+                tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="131dp" />
+
+
+            <TextView
+                android:id="@+id/num7"
+                style="@style/StyleButtons"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/seven"
+                android:layout_marginEnd="2dp"
+                tools:layout_editor_absoluteY="52dp"
+                tools:layout_editor_absoluteX="167dp" />
+
+
+            <TextView
+                android:id="@+id/num8"
+                style="@style/StyleButtons"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/eight"
+                tools:layout_editor_absoluteY="52dp"
+                tools:layout_editor_absoluteX="0dp" />
+
+
+            <TextView
+                android:id="@+id/num9"
+                style="@style/StyleButtons"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/nine"
+                tools:layout_editor_absoluteY="103dp"
+                tools:layout_editor_absoluteX="0dp" />
+
+
+            <TextView
+                android:id="@+id/multiply"
+                style="@style/StyleSymbols"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/multiply"
+                tools:layout_editor_absoluteY="190dp"
+                tools:layout_editor_absoluteX="292dp" />
+
+
+            <TextView
+                android:id="@+id/num4"
+                style="@style/StyleButtons"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/four"
+                tools:layout_editor_absoluteY="155dp"
+                tools:layout_editor_absoluteX="0dp" />
+
+
+            <TextView
+                android:id="@+id/num5"
+                style="@style/StyleButtons"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/five"
+                tools:layout_editor_absoluteY="206dp"
+                tools:layout_editor_absoluteX="0dp" />
+
+
+            <TextView
+                android:id="@+id/num6"
+                style="@style/StyleButtons"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/six"
+                tools:layout_editor_absoluteY="247dp"
+                tools:layout_editor_absoluteX="78dp" />
+
+
+            <TextView
+                android:id="@+id/minus"
+                style="@style/StyleSymbols"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/subtract"
+                tools:layout_editor_absoluteY="342dp"
+                tools:layout_editor_absoluteX="335dp" />
+
+
+            <TextView
+                android:id="@+id/num1"
+                style="@style/StyleButtons"
+                android:layout_width="33dp"
+                android:layout_height="52dp"
+                android:text="@string/one"
+                app:layout_constraintRight_toLeftOf="@+id/num2"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/posneg"
+                app:layout_constraintHorizontal_bias="0.0" />
+
+
+            <TextView
+                android:id="@+id/num2"
+                style="@style/StyleButtons"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/two"
+                app:layout_constraintRight_toLeftOf="@+id/num3"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/num0" />
+
+
+            <TextView
+                android:id="@+id/num3"
+                style="@style/StyleButtons"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/three"
+                app:layout_constraintRight_toLeftOf="@+id/plus"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/dot" />
+
+
+            <TextView
+                android:id="@+id/plus"
+                style="@style/StyleSymbols"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/add"
+                tools:layout_editor_absoluteX="336dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/equal" />
+
+
+            <TextView
+                android:id="@+id/posneg"
+                style="@style/StyleSymbols"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad10"
+                android:text="@string/posneg"
+                android:textSize="28sp"
+                android:layout_marginEnd="1dp"
+                tools:layout_editor_absoluteY="472dp"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/num0"
+                android:layout_marginRight="8dp"
+                app:layout_constraintHorizontal_bias="1.0" />
+
+
+            <TextView
+                android:id="@+id/num0"
+                style="@style/StyleButtons"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/zero"
+                tools:layout_editor_absoluteY="472dp"
+                app:layout_constraintRight_toLeftOf="@+id/dot"
+                android:layout_marginRight="8dp" />
+
+
+            <TextView
+                android:id="@+id/dot"
+                style="@style/StyleButtons"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/dot"
+                tools:layout_editor_absoluteY="472dp"
+                app:layout_constraintRight_toLeftOf="@+id/equal"
+                android:layout_marginRight="26dp" />
+
+
+            <TextView
+                android:id="@+id/equal"
+                style="@style/StyleSymbols"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/equal"
+                tools:layout_editor_absoluteY="472dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

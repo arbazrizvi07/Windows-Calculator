@@ -1,0 +1,142 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="txt_standard">Standard</string>
+    <string name="txt_scintifc">Scientifc</string>
+    <string name="txt_programmer">Programmer</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="calculator">Calculator</string>
+
+    <!--Calculator Variables and Names-->
+    <string name="action_settings">Settings</string>
+    <string name="stdCal">Standard Calculator</string>
+    <string name="sciCal">Scientific Calculator</string>
+    <string name="unitCal">Unit Converter</string>
+    <string name="FullCal">Calculator App</string>
+    <string name="title_activity_standard_cal">StandardCal</string>
+    <string name="title_activity_scientific_cal">ScientificCal</string>
+    <string name="title_activity_unit_coverter">UnitCoverter</string>
+    <string name="clear">C</string>
+    <string name="backspace">\u232b</string>
+    <string name="divide">\u00F7</string>
+    <string name="sqrt">√</string>
+    <string name="cuberoot">\u221B</string>
+    <string name="square">x²</string>
+    <string name="cube">x\u00B3</string>
+    <string name="tenpow">10\u207F</string>
+    <string name="sininv">sin\u207B\u00B9</string>
+    <string name="cosinv">cos\u207B\u00B9</string>
+    <string name="taninv">tan\u207B\u00B9</string>
+    <string name="posneg">\u00B1</string>
+    <string name="arrow">↑</string>
+    <string name="xpown">xⁿ</string>
+    <string name="epown">eⁿ</string>
+    <string name="pi">π</string>
+    <string name="title_activity_unit_area">UnitArea</string>
+    <string name="title_activity_unit_length">UnitLength</string>
+    <string name="title_activity_unit_weight">UnitWeight</string>
+    <string name="title_activity_unit_temperature">UnitTemperature</string>
+    <string name="openBracket">(</string>
+    <string name="closeBracket">)</string>
+    <string name="history">History</string>
+
+    <string-array name="area">
+        <item>Sq. Millimeter</item>
+        <item>Sq. Centimeter</item>
+        <item>Sq Meter</item>
+        <item>Sq. Kilometer</item>
+        <item>Acre</item>
+        <item>Hectare</item>
+    </string-array>
+
+    <string-array name="length">
+        <item>Nanometer</item>
+        <item>Millimeter</item>
+        <item>Centimeter</item>
+        <item>Meter</item>
+        <item>Kilometer</item>
+        <item>Inches</item>
+        <item>Foot</item>
+        <item>Yards</item>
+        <item>Mile</item>
+    </string-array>
+
+    <string-array name="temperature">
+        <item>Celsius</item>
+        <item>Farenheit</item>
+        <item>Kelvin</item>
+    </string-array>
+
+    <string-array name="weight">
+        <item>Milligrams</item>
+        <item>Centigrams</item>
+        <item>Decigrams</item>
+        <item>Grams</item>
+        <item>Kilograms</item>
+        <item>Metric tonnes</item>
+        <item>Pounds</item>
+        <item>Ounces</item>
+    </string-array>
+
+    <string-array name="menu">>
+        <item>Calculator</item>
+        <item>Standard</item>
+        <item>Scientific</item>
+        <item>Programmer</item>
+        <item>CONVERTER</item>
+        <item>Volume</item>
+        <item>Length</item>
+        <item>Weight and Mass</item>
+        <item>Temprature</item>
+        <item>Energy</item>
+        <item>Area</item>
+        <item>Speed</item>
+        <item>Time</item>
+        <item>Power</item>
+        <item>Data</item>
+        <item>Pressure</item>
+        <item>Angle</item>
+    </string-array>
+
+    <string name="title_activity_history">History</string>
+    <string name="deleteHistory">Delete History</string>
+    <string name="mode1">Degree</string>
+    <string name="mode2">Radian</string>
+    <string name="toggle">SWITCH</string>
+    <string name="sin">sin</string>
+    <string name="cos">cos</string>
+    <string name="tan">tan</string>
+    <string name="naturalLog">ln</string>
+    <string name="hyperbolicSine">sinh</string>
+    <string name="hyperbolicCosine">cosh</string>
+    <string name="hyperbolicTan">tanh</string>
+    <string name="log">log</string>
+    <string name="Mod">%</string>
+    <string name="inverse">1/x</string>
+    <string name="factorial">x!</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="multiply">X</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="subtract">\uFF0D</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="add">\uFF0B</string>
+    <string name="zero">0</string>
+    <string name="dot">.</string>
+    <string name="equal">\uFF1D</string>
+    <string name="modulo">%</string>
+    <string name="onex">1/x</string>
+    <string name="mc">MC</string>
+    <string name="mr">MR</string>
+    <string name="mplus">M+</string>
+    <string name="msub">M-</string>
+    <string name="ms">MS</string>
+    <string name="m">M</string>
+    <string name="no_history">There\'s no history yet</string>
+    <string name="invalide_expression">Invalid Expression</string>>
+</resources>
