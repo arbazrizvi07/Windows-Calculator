@@ -2,6 +2,7 @@ package com.example.neosoft.calculator.components.fragment.memory;
 
 import com.example.neosoft.calculator.base.listeners.BaseView;
 import com.example.neosoft.calculator.database.History;
+import com.example.neosoft.calculator.database.Memory;
 
 import java.util.ArrayList;
 
@@ -10,7 +11,7 @@ import java.util.ArrayList;
  */
 
 public interface MemoryView extends BaseView {
-    void setHistoryList(ArrayList<History> historyList);
+    void setHistoryList(ArrayList<Memory> historyList);
 
     void showEmptyMessage();
 }

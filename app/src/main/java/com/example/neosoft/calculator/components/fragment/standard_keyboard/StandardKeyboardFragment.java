@@ -1,5 +1,6 @@
 package com.example.neosoft.calculator.components.fragment.standard_keyboard;
 
+import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.widget.TextView;
 
@@ -87,6 +88,7 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.num0)
     public void onPressKey0() {
+        Key0.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
         if (standardKeypadListner != null) {
             standardKeypadListner.onNumberKeyClick("0");
         }
@@ -94,6 +96,7 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.num1)
     public void onPressKey1() {
+        Key1.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
         if (standardKeypadListner != null) {
             standardKeypadListner.onNumberKeyClick("1");
         }
@@ -101,6 +104,7 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.num2)
     public void onPressKey2() {
+        Key2.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
         if (standardKeypadListner != null) {
             standardKeypadListner.onNumberKeyClick("2");
         }
@@ -108,6 +112,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.num3)
     public void onPressKey3() {
+        Key3.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onNumberKeyClick("3");
         }
@@ -115,6 +121,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.num4)
     public void onPressKey4() {
+        Key4.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onNumberKeyClick("4");
         }
@@ -122,6 +130,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.num5)
     public void onPressKey5() {
+        Key5.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onNumberKeyClick("5");
         }
@@ -129,6 +139,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.num6)
     public void onPressKey6() {
+        Key6.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onNumberKeyClick("6");
         }
@@ -136,6 +148,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.num7)
     public void onPressKey7() {
+        Key7.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onNumberKeyClick("7");
         }
@@ -143,6 +157,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.num8)
     public void onPressKey8() {
+        Key8.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onNumberKeyClick("8");
         }
@@ -150,6 +166,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.num9)
     public void onPressKey9() {
+        Key9.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onNumberKeyClick("9");
         }
@@ -157,6 +175,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.dot)
     public void onPressDot() {
+        dot.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onPressDot();
         }
@@ -164,6 +184,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.clear)
     public void onPressClear() {
+        clear.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onPressClear();
         }
@@ -171,6 +193,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.backSpace)
     public void onPressBackSpace() {
+        backSpace.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onPressBackSpace();
         }
@@ -178,6 +202,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.plus)
     public void onPressPlus() {
+        plus.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onSymbolKeyClick("+");
         }
@@ -185,6 +211,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.minus)
     public void onPressMinus() {
+        minus.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onSymbolKeyClick("-");
         }
@@ -192,6 +220,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.divide)
     public void onPressDivide() {
+        divide.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onSymbolKeyClick("/");
         }
@@ -199,6 +229,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.multiply)
     public void onPressMultiply() {
+        multiply.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onSymbolKeyClick("*");
         }
@@ -206,6 +238,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.sqrt)
     public void onPressSqrt() {
+        sqrt.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onPressSqrt();
         }
@@ -213,6 +247,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.square)
     public void onPressSquare() {
+        square.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onPressSquare();
         }
@@ -220,6 +256,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.posneg)
     public void onPressPosneg() {
+        posneg.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onPressPosneg();
         }
@@ -227,6 +265,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.equal)
     public void onPressEqual() {
+        equal.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onPressEqual();
         }
@@ -234,6 +274,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.tv_clear_all)
     public void onPressClearAll() {
+        clearAll.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onPressClear();
         }
@@ -241,6 +283,8 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.tv_modulo)
     public void onPressModulo() {
+        mModulo.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onPressModulo();
         }
@@ -248,13 +292,11 @@ public class StandardKeyboardFragment extends BaseFragment implements StdKeyboar
 
     @OnClick(R.id.tv_one_x)
     public void onPressOneX() {
+        mOneX.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+
         if (standardKeypadListner != null) {
             standardKeypadListner.onPressOneX();
         }
-    }
-
-    public void onPressHistory() {
-
     }
 
     public void initKeypadListner(StandardKeypadListner stdKeyListner) {

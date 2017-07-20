@@ -3,14 +3,16 @@ package com.example.neosoft.calculator.components.fragment.memory;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.neosoft.calculator.R;
-import com.example.neosoft.calculator.adapters.HistoryAdapter;
+import com.example.neosoft.calculator.adapters.MemoryAdapter;
 import com.example.neosoft.calculator.base.BaseFragment;
-import com.example.neosoft.calculator.database.History;
+import com.example.neosoft.calculator.database.Memory;
+import com.example.neosoft.calculator.listners.MemoryOperationListner;
 
 import java.util.ArrayList;
 
@@ -34,8 +36,8 @@ public class MemoryFragment extends BaseFragment implements MemoryView {
     TextView mTextEmpty;
 
 
-    private HistoryAdapter mHistoryAdapter;
-    private ArrayList<History> historyArrayList;
+    private MemoryAdapter mMemoryAdapter;
+    private ArrayList<Memory> memoryArrayList;
 
     @Override
     protected void initializePresenter() {
@@ -52,7 +54,7 @@ public class MemoryFragment extends BaseFragment implements MemoryView {
     @Override
     protected void initViews(View view) {
         ButterKnife.bind(view);
-        historyArrayList = new ArrayList<>();
+        memoryArrayList = new ArrayList<>();
         memoryPresenter.getHistories();
     }
 
@@ -62,12 +64,35 @@ public class MemoryFragment extends BaseFragment implements MemoryView {
     }
 
     @Override
-    public void setHistoryList(ArrayList<History> historyList) {
-        mHistoryAdapter = new HistoryAdapter(historyList);
+    public void setHistoryList(ArrayList<Memory> historyList) {
+        Log.d("memorylist", historyList.size() + "");
+        memoryArrayList.addAll(historyList);
+        mMemoryAdapter = new MemoryAdapter(memoryArrayList, getContext());
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
         mMemoryRecyclerView.setLayoutManager(mLayoutManager);
         mMemoryRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        mMemoryRecyclerView.setAdapter(mHistoryAdapter);
+        mMemoryRecyclerView.setAdapter(mMemoryAdapter);
+        mMemoryAdapter.notifyDataSetChanged();
+
+        mMemoryAdapter.setMemoryClickListner(new MemoryOperationListner() {
+            @Override
+            public void onMcClick() {
+                cleanHistory();
+                memoryPresenter.getHistories();
+            }
+
+            @Override
+            public void onMPlusClick() {
+                memoryPresenter.getHistories();
+                //mMemoryAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onMSubClick() {
+                memoryPresenter.getHistories();
+                //mMemoryAdapter.notifyDataSetChanged();
+            }
+        });
     }
 
     @Override
@@ -76,4 +101,13 @@ public class MemoryFragment extends BaseFragment implements MemoryView {
         mDeleteButton.setVisibility(View.GONE);
         mMemoryRecyclerView.setVisibility(View.GONE);
     }
+
+    public MemoryAdapter getAdapter() {
+        if (mMemoryAdapter == null) {
+            mMemoryAdapter = new MemoryAdapter(memoryArrayList, getContext());
+        }
+        return mMemoryAdapter;
+    }
+
+
 }

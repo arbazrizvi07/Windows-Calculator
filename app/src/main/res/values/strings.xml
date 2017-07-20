@@ -138,5 +138,6 @@
     <string name="ms">MS</string>
     <string name="m">M</string>
     <string name="no_history">There\'s no history yet</string>
+    <string name="no_memory">There\'s no memory yet</string>
     <string name="invalide_expression">Invalid Expression</string>>
 </resources>

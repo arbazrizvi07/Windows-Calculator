@@ -1,7 +1,7 @@
 package com.example.neosoft.calculator.components.fragment.memory;
 
 import com.example.neosoft.calculator.base.listeners.BasePresenter;
-import com.example.neosoft.calculator.database.History;
+import com.example.neosoft.calculator.database.Memory;
 import com.example.neosoft.calculator.utils.Constants;
 
 import java.util.ArrayList;
@@ -17,15 +17,15 @@ import io.realm.RealmResults;
 public class MemoryPresenter extends BasePresenter<MemoryView> {
 
     Realm realm = Realm.getDefaultInstance();
-    private ArrayList<History> historyArrayList = new ArrayList<>();
+    private ArrayList<Memory> memoryList = new ArrayList<>();
 
     public void getHistories() {
-        RealmQuery<History> query = realm.where(History.class);
+        RealmQuery<Memory> query = realm.where(Memory.class);
         query.equalTo("calType", Constants.STANDARD_TYPE);
-        RealmResults<History> result = query.findAll();
+        RealmResults<Memory> result = query.findAll();
         if (result.size() > 0) {
-            historyArrayList.addAll(result);
-            getView().setHistoryList(historyArrayList);
+            memoryList.addAll(result);
+            getView().setHistoryList(memoryList);
         } else {
             getView().showEmptyMessage();
         }
@@ -35,7 +35,7 @@ public class MemoryPresenter extends BasePresenter<MemoryView> {
         realm.executeTransaction(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
-                RealmResults<History> result = realm.where(History.class).equalTo("calType", Constants.STANDARD_TYPE).findAll();
+                RealmResults<Memory> result = realm.where(Memory.class).equalTo("calType", Constants.STANDARD_TYPE).findAll();
                 if (result.deleteAllFromRealm()) {
                     getView().showEmptyMessage();
                 }

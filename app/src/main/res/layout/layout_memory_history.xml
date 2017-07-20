@@ -4,5 +4,53 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/tv_mem_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:padding="@dimen/pad10"
+        android:text="25"
+        android:textColor="@android:color/black"
+        android:textSize="26sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:padding="@dimen/pad5">
+
+        <TextView
+            android:id="@+id/btn_mc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/pad5"
+            android:padding="@dimen/pad10"
+            android:text="MC"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/btn_m_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/pad5"
+            android:padding="@dimen/pad10"
+            android:text="M+"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/btn_m_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/pad5"
+            android:padding="@dimen/pad10"
+            android:text="M-"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="18sp" />
+
+    </LinearLayout>
 
 </LinearLayout>

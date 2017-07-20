@@ -65,6 +65,7 @@ public class StandardCalculatorFragment extends BaseFragment implements Standard
     private String text = "";
     private Double result = 0.0;
     private boolean isResultSet;
+    private MemoryFragment memFragment;
 
     @Override
     protected void initializePresenter() {
@@ -84,6 +85,7 @@ public class StandardCalculatorFragment extends BaseFragment implements Standard
         setCalculationResult(0.0);
         mEditTop.addTextChangedListener(this);
         stdKeyFragment = new StandardKeyboardFragment();
+        memFragment = new MemoryFragment();
         addFragment(R.id.fl_key_holder, stdKeyFragment, Constants.STD_KEYBOARD);
         initListner();
     }
@@ -92,11 +94,13 @@ public class StandardCalculatorFragment extends BaseFragment implements Standard
      * Initialize Click Listner
      */
     private void initListner() {
+
         stdKeyFragment.initKeypadListner(new StandardKeypadListner() {
             @Override
             public void onNumberKeyClick(String num) {
                 if (mEditBottom.getText().toString().equalsIgnoreCase("0")) {
                     setCalculationResult(Double.valueOf(num));
+                    isResultSet = false;
                 } else {
                     if (isResultSet) {
                         isResultSet = false;

@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/pad10"
         android:padding="@dimen/pad10"
-        android:text="@string/no_history"
+        android:text="@string/no_memory"
         android:textSize="@dimen/font16"
         android:visibility="gone" />
 

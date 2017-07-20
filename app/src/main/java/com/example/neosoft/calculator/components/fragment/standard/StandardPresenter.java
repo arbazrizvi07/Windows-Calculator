@@ -128,7 +128,9 @@ public class StandardPresenter extends BasePresenter<StandardView> {
     }
 
     public void clickMemoryPlus(String value) {
-
+        if (value == null || value.trim().length() == 0) {
+            return;
+        }
         RealmQuery<Memory> query = realm.where(Memory.class);
         query.equalTo("calType", Constants.STANDARD_TYPE);
         Memory result = query.findFirst();
@@ -140,7 +142,6 @@ public class StandardPresenter extends BasePresenter<StandardView> {
         } else {
             realm.beginTransaction();
             Memory memory = realm.createObject(Memory.class);
-            ;
             memory.setCalResult(value);
             memory.setFirstValue(value);
             memory.setCalType(Constants.STANDARD_TYPE);
