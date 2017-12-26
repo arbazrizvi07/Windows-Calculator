@@ -18,7 +18,7 @@
             android:layout_above="@+id/layout_keyboard"
             android:orientation="horizontal">
 
-            <com.example.neosoft.calculator.utils.CalTextView
+            <TextView
                 style="@style/StyleSymbols"
                 android:id="@+id/tv_modulo"
                 android:layout_width="match_parent"
@@ -26,7 +26,7 @@
                 android:layout_weight="1"
                 android:text="@string/modulo" />
 
-            <com.example.neosoft.calculator.utils.CalTextView
+            <TextView
                 android:id="@+id/sqrt"
                 style="@style/StyleSymbols"
                 android:layout_width="match_parent"
@@ -34,7 +34,7 @@
                 android:layout_weight="1"
                 android:text="@string/sqrt" />
 
-            <com.example.neosoft.calculator.utils.CalTextView
+            <TextView
                 android:id="@+id/square"
                 style="@style/StyleSymbols"
                 android:layout_width="match_parent"
@@ -42,7 +42,7 @@
                 android:layout_weight="1"
                 android:text="@string/square" />
 
-            <com.example.neosoft.calculator.utils.CalTextView
+            <TextView
                 style="@style/StyleSymbols"
                 android:id="@+id/tv_one_x"
                 android:layout_width="match_parent"
@@ -66,7 +66,7 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     style="@style/StyleSymbols"
                     android:id="@+id/tv_clear_all"
                     android:layout_width="match_parent"
@@ -74,7 +74,7 @@
                     android:layout_weight="1"
                     android:text="CE" />
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     android:id="@+id/clear"
                     style="@style/StyleSymbols"
                     android:layout_width="match_parent"
@@ -82,7 +82,7 @@
                     android:layout_weight="1"
                     android:text="@string/clear" />
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     android:id="@+id/backSpace"
                     style="@style/StyleSymbols"
                     android:layout_width="match_parent"
@@ -91,7 +91,7 @@
                     android:text="@string/backspace" />
 
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     android:id="@+id/divide"
                     style="@style/StyleSymbols"
                     android:layout_width="match_parent"
@@ -109,7 +109,7 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     android:id="@+id/num7"
                     style="@style/StyleButtons"
                     android:layout_width="match_parent"
@@ -118,7 +118,7 @@
                     android:text="@string/seven" />
 
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     android:id="@+id/num8"
                     style="@style/StyleButtons"
                     android:layout_width="match_parent"
@@ -126,7 +126,7 @@
                     android:layout_weight="1"
                     android:text="@string/eight" />
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     android:id="@+id/num9"
                     style="@style/StyleButtons"
                     android:layout_width="match_parent"
@@ -134,7 +134,7 @@
                     android:layout_weight="1"
                     android:text="@string/nine" />
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     android:id="@+id/multiply"
                     style="@style/StyleSymbols"
                     android:layout_width="match_parent"
@@ -150,7 +150,7 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     android:id="@+id/num4"
                     style="@style/StyleButtons"
                     android:layout_width="match_parent"
@@ -159,7 +159,7 @@
                     android:text="@string/four" />
 
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     android:id="@+id/num5"
                     style="@style/StyleButtons"
                     android:layout_width="match_parent"
@@ -167,7 +167,7 @@
                     android:layout_weight="1"
                     android:text="@string/five" />
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     android:id="@+id/num6"
                     style="@style/StyleButtons"
                     android:layout_width="match_parent"
@@ -175,7 +175,7 @@
                     android:layout_weight="1"
                     android:text="@string/six" />
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     android:id="@+id/minus"
                     style="@style/StyleSymbols"
                     android:layout_width="match_parent"
@@ -191,7 +191,7 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     android:id="@+id/num1"
                     style="@style/StyleButtons"
                     android:layout_width="match_parent"
@@ -199,7 +199,7 @@
                     android:layout_weight="1"
                     android:text="@string/one" />
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     android:id="@+id/num2"
                     style="@style/StyleButtons"
                     android:layout_width="match_parent"
@@ -207,7 +207,7 @@
                     android:layout_weight="1"
                     android:text="@string/two" />
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     android:id="@+id/num3"
                     style="@style/StyleButtons"
                     android:layout_width="match_parent"
@@ -215,7 +215,7 @@
                     android:layout_weight="1"
                     android:text="@string/three" />
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     android:id="@+id/plus"
                     style="@style/StyleSymbols"
                     android:layout_width="match_parent"
@@ -232,7 +232,7 @@
                 android:layout_weight="1"
                 android:paddingBottom="@dimen/pad5">
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     android:id="@+id/posneg"
                     style="@style/StyleSymbols"
                     android:layout_width="match_parent"
@@ -242,7 +242,7 @@
                     android:text="@string/posneg"
                     android:textSize="28sp" />
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     android:id="@+id/num0"
                     style="@style/StyleButtons"
                     android:layout_width="match_parent"
@@ -250,7 +250,7 @@
                     android:layout_weight="1"
                     android:text="@string/zero" />
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     android:id="@+id/dot"
                     style="@style/StyleButtons"
                     android:layout_width="match_parent"
@@ -258,7 +258,7 @@
                     android:layout_weight="1"
                     android:text="@string/dot" />
 
-                <com.example.neosoft.calculator.utils.CalTextView
+                <TextView
                     android:id="@+id/equal"
                     style="@style/StyleSymbols"
                     android:layout_width="match_parent"

@@ -34,18 +34,10 @@
             android:id="@+id/lv_drawer_list"
             android:layout_width="300dp"
             android:layout_height="match_parent"
-            android:layout_above="@+id/divider"
             android:background="@color/bg_keyboard"
             android:choiceMode="singleChoice"
             android:divider="@null"
             android:dividerHeight="0dp" />
-
-        <View
-            android:id="@+id/divider"
-            android:layout_width="300dp"
-            android:layout_height="1dp"
-            android:layout_above="@+id/footer"
-            android:background="@color/bg_history" />
 
         <TextView
             android:id="@+id/footer"
@@ -53,15 +45,14 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:background="@color/bg_keyboard"
-            android:drawableLeft="@drawable/ic_settings"
             android:drawablePadding="@dimen/pad25"
             android:gravity="center_vertical"
             android:padding="@dimen/pad12"
-            android:text="Settings"
+            android:text=""
             android:textColor="@android:color/black"
-            android:textSize="@dimen/font18" />
+            android:textSize="@dimen/font18"
+            android:visibility="visible" />
 
     </RelativeLayout>
-
 
 </android.support.v4.widget.DrawerLayout>

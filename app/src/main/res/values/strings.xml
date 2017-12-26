@@ -81,21 +81,21 @@
     <string-array name="menu">>
         <item>Calculator</item>
         <item>Standard</item>
-        <item>Scientific</item>
-        <item>Programmer</item>
-        <item>CONVERTER</item>
-        <item>Volume</item>
-        <item>Length</item>
-        <item>Weight and Mass</item>
-        <item>Temprature</item>
-        <item>Energy</item>
-        <item>Area</item>
-        <item>Speed</item>
-        <item>Time</item>
-        <item>Power</item>
-        <item>Data</item>
-        <item>Pressure</item>
-        <item>Angle</item>
+        <!--<item>Scientific</item>-->
+        <!--<item>Programmer</item>-->
+        <!--<item>CONVERTER</item>-->
+        <!--<item>Volume</item>-->
+        <!--<item>Length</item>-->
+        <!--<item>Weight and Mass</item>-->
+        <!--<item>Temprature</item>-->
+        <!--<item>Energy</item>-->
+        <!--<item>Area</item>-->
+        <!--<item>Speed</item>-->
+        <!--<item>Time</item>-->
+        <!--<item>Power</item>-->
+        <!--<item>Data</item>-->
+        <!--<item>Pressure</item>-->
+        <!--<item>Angle</item>-->
     </string-array>
 
     <string name="title_activity_history">History</string>
