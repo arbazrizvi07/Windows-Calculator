@@ -88,9 +88,9 @@ public class StandardPresenter extends BasePresenter<StandardView> {
             String expression = Utility.getFinalExpression(topStrings);
             double result = doubleEvaluator.evaluate(expression);
             result = ((result / 100) * Double.valueOf(bottomString));
-            getView().setModuloResult(Utility.getCalcuolationResult(result));
+            getView().setModuloResult(Utility.getCalcuolationResult(String.valueOf(result)));
         } else {
-            getView().setModuloResult(Constants.BAD_EXPRESSION);
+            getView().showToast("Invalid Value, Please enter value to calculate modulus");
         }
     }
 
@@ -99,7 +99,7 @@ public class StandardPresenter extends BasePresenter<StandardView> {
             String expression = "1/(" + bottomString + ")";
             double result = doubleEvaluator.evaluate(expression);
             String calculation = topStrings + expression;
-            getView().setOneXResult(Utility.getCalcuolationResult(result), calculation);
+            getView().setOneXResult(Utility.getCalcuolationResult(String.valueOf(result)), calculation);
         } else {
         }
     }
@@ -137,7 +137,7 @@ public class StandardPresenter extends BasePresenter<StandardView> {
         if (result != null && result.getFirstValue() != null) {
             double val = Double.parseDouble(result.getCalResult()) + Double.parseDouble(result.getFirstValue());
             realm.beginTransaction();
-            result.setCalResult(String.valueOf(Utility.getCalcuolationResult(val)));
+            result.setCalResult(String.valueOf(Utility.getCalcuolationResult(String.valueOf(val))));
             realm.commitTransaction();
         } else {
             realm.beginTransaction();
@@ -160,7 +160,7 @@ public class StandardPresenter extends BasePresenter<StandardView> {
         if (result != null && result.getFirstValue() != null) {
             double val = Double.parseDouble(result.getCalResult()) - Double.parseDouble(result.getFirstValue());
             realm.beginTransaction();
-            result.setCalResult(String.valueOf(Utility.getCalcuolationResult(val)));
+            result.setCalResult(String.valueOf(Utility.getCalcuolationResult(String.valueOf(val))));
             realm.commitTransaction();
         }
     }

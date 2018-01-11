@@ -37,7 +37,8 @@
             android:background="@color/bg_keyboard"
             android:choiceMode="singleChoice"
             android:divider="@null"
-            android:dividerHeight="0dp" />
+            android:dividerHeight="0dp"
+            android:focusedByDefault="true" />
 
         <TextView
             android:id="@+id/footer"

@@ -54,6 +54,7 @@ public class HomeActivity extends BaseActivity implements HomeView, AdapterView.
         DrawerItemCustomAdapter adapter = new DrawerItemCustomAdapter(this, R.layout.menu_text, mStringArray);
         mNavigationList.setAdapter(adapter);
         mNavigationList.setOnItemClickListener(this);
+        mNavigationList.setSelection(1);
     }
 
     @Override
@@ -82,7 +83,6 @@ public class HomeActivity extends BaseActivity implements HomeView, AdapterView.
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_history:
-                //homePresenter.showHistory();
                 standard.onPressHistory();
                 break;
             default:
@@ -130,6 +130,10 @@ public class HomeActivity extends BaseActivity implements HomeView, AdapterView.
 
     @Override
     public void onBackPressed() {
+        if (standard.isHistoryVisible()) {
+            standard.onPressHistory();
+            return;
+        }
         if (mDrawer.isDrawerOpen(GravityCompat.START)) {
             mDrawer.closeDrawer(GravityCompat.START);
         } else {

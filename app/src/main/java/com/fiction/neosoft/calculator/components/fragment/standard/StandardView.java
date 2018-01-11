@@ -14,4 +14,6 @@ public interface StandardView extends BaseView {
     void setOneXResult(String result, String calculation);
 
     void showMemoryResult(String calResult);
+
+    void showToast(String msg);
 }

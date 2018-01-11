@@ -4,11 +4,13 @@ import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.fiction.neosoft.calculator.R;
 import com.fiction.neosoft.calculator.base.BaseFragment;
@@ -82,7 +84,7 @@ public class StandardCalculatorFragment extends BaseFragment implements Standard
     @Override
     protected void initViews(View view) {
         ButterKnife.bind(view);
-        setCalculationResult(0.0);
+        setCalculationResult("0.0");
         mEditTop.addTextChangedListener(this);
         stdKeyFragment = new StandardKeyboardFragment();
         memFragment = new MemoryFragment();
@@ -99,7 +101,7 @@ public class StandardCalculatorFragment extends BaseFragment implements Standard
             @Override
             public void onNumberKeyClick(String num) {
                 if (mEditBottom.getText().toString().equalsIgnoreCase("0")) {
-                    setCalculationResult(Double.valueOf(num));
+                    setCalculationResult(num);
                     isResultSet = false;
                 } else {
                     if (isResultSet) {
@@ -132,7 +134,7 @@ public class StandardCalculatorFragment extends BaseFragment implements Standard
 
             @Override
             public void onPressClearAll() {
-                mEditBottom.setText("");
+                mEditBottom.setText("0");
                 count = 0;
             }
 
@@ -150,7 +152,7 @@ public class StandardCalculatorFragment extends BaseFragment implements Standard
             public void onPressClear() {
                 count = 0;
                 mEditTop.setText("");
-                mEditBottom.setText("");
+                mEditBottom.setText("0");
                 expression = "";
             }
 
@@ -186,7 +188,8 @@ public class StandardCalculatorFragment extends BaseFragment implements Standard
             public void onPressEqual() {
                 String calculation = Utility.getFinalExpression(mEditTop.getText().toString() + mEditBottom.getText().toString());
                 onPressEqualButton();
-                standardPresenter.storeCalculation(TYPE, calculation, mEditBottom.getText().toString());
+                if (!TextUtils.isEmpty(mEditTop.getText().toString()))
+                    standardPresenter.storeCalculation(TYPE, calculation, mEditBottom.getText().toString());
             }
 
         });
@@ -229,6 +232,14 @@ public class StandardCalculatorFragment extends BaseFragment implements Standard
         }
     }
 
+    public boolean isHistoryVisible() {
+        StandardKeyboardFragment stdKeyboard = (StandardKeyboardFragment) getChildFragmentManager().findFragmentByTag("STD_KEYBOARD");
+        if (!stdKeyboard.isVisible())
+            return true;
+        else
+            return false;
+    }
+
     /**
      * Get Calculation result and User input
      *
@@ -261,9 +272,14 @@ public class StandardCalculatorFragment extends BaseFragment implements Standard
      *
      * @param result
      */
-    private void setCalculationResult(double result) {
+    private void setCalculationResult(String result) {
         isResultSet = true;
         mEditBottom.setText(Utility.getCalcuolationResult(result));
+    }
+
+    @Override
+    public void showToast(String msg) {
+        Toast.makeText(getContext(), msg, Toast.LENGTH_LONG).show();
     }
 
     /**
@@ -327,7 +343,7 @@ public class StandardCalculatorFragment extends BaseFragment implements Standard
             setCalculation(getTopStrings() + " " + getBottomString() + " " + op);
             String evaluate = getTopStrings().replaceAll(" ", "");
             result = new ExtendedDoubleEvaluator().evaluate(Utility.getFinalExpression(evaluate));
-            setCalculationResult(result);
+            setCalculationResult(result.toString());
 
         } else {
             String text = mEditTop.getText().toString();
@@ -378,8 +394,7 @@ public class StandardCalculatorFragment extends BaseFragment implements Standard
     public void setModuloResult(String result) {
         mEditTop.setText("");
         try {
-            double res = Double.valueOf(result);
-            setCalculationResult(res);
+            setCalculationResult(result);
         } catch (Exception e) {
             mEditBottom.setText(Constants.BAD_EXPRESSION);
         }
@@ -390,8 +405,7 @@ public class StandardCalculatorFragment extends BaseFragment implements Standard
     public void setOneXResult(String result, String calculation) {
         mEditTop.setText(calculation);
         try {
-            double res = Double.valueOf(result);
-            setCalculationResult(res);
+            setCalculationResult(result);
         } catch (Exception e) {
             mEditBottom.setText(Constants.BAD_EXPRESSION);
         }
@@ -399,8 +413,7 @@ public class StandardCalculatorFragment extends BaseFragment implements Standard
 
     @Override
     public void showMemoryResult(String calResult) {
-        double res = Double.valueOf(calResult);
-        setCalculationResult(res);
+        setCalculationResult(calResult);
     }
 
     protected void addFragment(@IdRes int containerViewId,

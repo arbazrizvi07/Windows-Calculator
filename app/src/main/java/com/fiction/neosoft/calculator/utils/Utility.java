@@ -19,13 +19,11 @@ public class Utility {
         return "";
     }
 
-    public static String getCalcuolationResult(double value) {
-        String val = String.valueOf(value);
-        int strLen = String.valueOf(value).length();
-        if (val.charAt(strLen - 1) == '0' && val.charAt(strLen - 2) == '.') {
-            return Double.valueOf(val).intValue() + "";
+    public static String getCalcuolationResult(String value) {
+        if (value.endsWith(".0")) {
+            return value.replace(".0", "");
         } else {
-            return val;
+            return value;
         }
     }
 
