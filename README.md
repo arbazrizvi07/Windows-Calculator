@@ -1,6 +1,6 @@
 # Windows Calculator
 
-Calculator with clean UI and conversion support
+Calculator with clean UI and conversion support. Included calculation history support
 
 ## About
 
@@ -10,14 +10,11 @@ Calculator is developed using Model View Presenter Pattern (MVP).
 
 User can simply download the code and run the project.
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Library Used
 
 * Butterknife - View Binding tool
-* Crashlytics - Crash and logs
+* Realm - Relational Database
 
 ## Versioning
 
